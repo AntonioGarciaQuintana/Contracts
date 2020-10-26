@@ -1,4 +1,4 @@
-﻿using ContractsApplication.Model;
+﻿using ContractsApplication.Models;
 using ContractsApplication.Repository;
 using ContractsApplication.Service.Interfaces;
 using System;

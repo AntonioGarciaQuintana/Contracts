@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
-namespace ContractsApplication.Model
+namespace ContractsApplication.Models
 {
     [Table("tblTest")]
     public class Test

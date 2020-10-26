@@ -7,8 +7,12 @@ using System.Threading.Tasks;
 
 namespace ContractsApplication.Service.Interfaces
 {
-    public interface ITestService
+    public interface IContractService
     {
-        IList<Test> GetAll();
+        void SaveOrUpdateContract(Contracts contract);
+        void DeleteContract(int id);
+        IQueryable GetAllContracts();
+        Contracts GetContractById(int id);
+
     }
 }

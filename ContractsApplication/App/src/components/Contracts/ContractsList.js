@@ -17,7 +17,7 @@ export class ContractList extends Component {
                             </Col>
                             <Col lg="4">
                                 <Link to="/contractsform">
-                                    <button class="btn btn-accent float-right">Nuevo Contrato</button>
+                                    <button className="btn btn-accent float-right">Nuevo Contrato</button>
                                 </Link>
                             </Col>
                         </Row>

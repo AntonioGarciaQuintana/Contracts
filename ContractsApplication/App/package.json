@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "../Front",
   "dependencies": {
+    "axios": "^0.21.0",
     "camelize": "^1.0.0",
     "chart.js": "^2.7.3",
     "classnames": "^2.2.6",
@@ -26,7 +27,7 @@
     "start": "react-scripts start",
     "build:prod": "cross-env  REACT_APP_GAID=UA-115105611-1 npm run build",
     "build": "cross-env  react-scripts build",
-    "postbuild":"xcopy /s \".\\build\" \"..\\Front\" \/Y",
+    "postbuild": "xcopy /s \".\\build\" \"..\\Front\" /Y",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

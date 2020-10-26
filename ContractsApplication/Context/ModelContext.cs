@@ -1,4 +1,4 @@
-﻿using ContractsApplication.Model;
+﻿using ContractsApplication.Models;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -12,6 +12,7 @@ namespace ContractsApplication.Context
     {
 
         public IDbSet<Test> Tests { get; set; }
+        public IDbSet<Contracts> Contracts { get; set; }
 
         public ModelContext() : base(ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString)
         {
