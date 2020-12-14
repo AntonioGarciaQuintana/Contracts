@@ -1,5 +1,6 @@
 ﻿using ContractsApplication.Models;
 using ContractsApplication.Service.Interfaces;
+using ContractsApplication.Util;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,18 +23,36 @@ namespace ContractsApplication.Controllers
         [Route("")]
         public JsonResult SaveContract(Contracts model)
         {
-            try {
+            try
+            {
                 if (!ModelState.IsValid)
                 {
-                    return Json("Modelo inválido: " + ModelState, JsonRequestBehavior.AllowGet);
+                    return Json(ApiResult.GetStructure(false, "", "Invalid model"), JsonRequestBehavior.AllowGet);
                 }
 
                 ContractService.SaveOrUpdateContract(model);
-            } catch (Exception e) {
-                return Json(false, JsonRequestBehavior.AllowGet);
+                return Json(ApiResult.GetStructure(true, "", "Model was saved successfully"), JsonRequestBehavior.AllowGet);
             }
-    
-            return Json(true, JsonRequestBehavior.AllowGet);
+            catch (Exception e)
+            {
+                return Json(ApiResult.GetStructure(false, "", e.Message), JsonRequestBehavior.AllowGet);
+            }
+
+        }
+
+        [HttpGet]
+        public JsonResult GetAllContracts()
+        {
+            var json = "";
+            try
+            {
+                var result = ContractService.GetAllContracts();
+                return Json(ApiResult.GetStructure(true, result), JsonRequestBehavior.AllowGet);
+            }
+            catch (Exception e)
+            {
+                return Json(ApiResult.GetStructure(false, "", e.Message), JsonRequestBehavior.AllowGet);
+            }
         }
         // GET: Contract
         public ActionResult Index()

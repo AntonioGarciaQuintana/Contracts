@@ -192,8 +192,6 @@ C:\git projects\ContractsApplication\ContractsApplication\obj\Debug\ContractsApp
 C:\git projects\ContractsApplication\ContractsApplication\obj\Debug\ContractsApplication.csproj.CopyComplete
 C:\git projects\ContractsApplication\ContractsApplication\obj\Debug\ContractsApplication.dll
 C:\git projects\ContractsApplication\ContractsApplication\obj\Debug\ContractsApplication.pdb
-C:\git projects\Contracts\ContractsApplication\obj\Debug\ContractsApplication.Migrations.InitialCreate.resources
-C:\git projects\Contracts\ContractsApplication\obj\Debug\ContractsApplication.csproj.GenerateResource.cache
 C:\git projects\Contracts\ContractsApplication\bin\ContractsApplication.dll.config
 C:\git projects\Contracts\ContractsApplication\bin\ContractsApplication.dll
 C:\git projects\Contracts\ContractsApplication\bin\ContractsApplication.pdb
@@ -285,8 +283,12 @@ C:\git projects\Contracts\ContractsApplication\bin\Unity.Abstractions.pdb
 C:\git projects\Contracts\ContractsApplication\bin\Unity.Container.pdb
 C:\git projects\Contracts\ContractsApplication\bin\Antlr3.Runtime.pdb
 C:\git projects\Contracts\ContractsApplication\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\git projects\Contracts\ContractsApplication\obj\Debug\ContractsApplication.csprojAssemblyReference.cache
+C:\git projects\Contracts\ContractsApplication\obj\Debug\ContractsApplication.Migrations.InitialCreate.resources
+C:\git projects\Contracts\ContractsApplication\obj\Debug\ContractsApplication.Migrations.addContractModelAndService.resources
+C:\git projects\Contracts\ContractsApplication\obj\Debug\ContractsApplication.csproj.GenerateResource.cache
+C:\git projects\Contracts\ContractsApplication\obj\Debug\ContractsApplication.csproj.CoreCompileInputs.cache
 C:\git projects\Contracts\ContractsApplication\obj\Debug\ContractsApplication.csproj.CopyComplete
 C:\git projects\Contracts\ContractsApplication\obj\Debug\ContractsApplication.dll
 C:\git projects\Contracts\ContractsApplication\obj\Debug\ContractsApplication.pdb
-C:\git projects\Contracts\ContractsApplication\obj\Debug\ContractsApplication.Migrations.addContractModelAndService.resources
+C:\git projects\Contracts\ContractsApplication\obj\Debug\ContractsApplication.csprojAssemblyReference.cache
+C:\git projects\Contracts\ContractsApplication\obj\Debug\ContractsApplication.Migrations.updateStartDateColumnContract.resources

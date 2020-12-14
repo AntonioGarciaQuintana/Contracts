@@ -11,7 +11,7 @@ namespace ContractsApplication.Service.Interfaces
     {
         void SaveOrUpdateContract(Contracts contract);
         void DeleteContract(int id);
-        IQueryable GetAllContracts();
+        IList<Contracts> GetAllContracts();
         Contracts GetContractById(int id);
 
     }

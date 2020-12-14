@@ -1,11 +1,46 @@
 import React, { Component } from "react";
 import { Row, Col, Card, CardHeader, CardBody } from "shards-react";
 import { Link } from "react-router-dom";
+import ContractList from "./ContractList";
+import axios from 'axios';
+export class ContractTable extends Component {
 
+    state = {
+        contracts: [{}]
+    };
 
+    constructor(props) {
+        super(props);
+        this.GetContracts();
+    }
+    // state = {
+    //     contracts: [{
+    //         id: 1,
+    //         name: "Maria Palomares",
+    //         acres: "$90,000.00",
+    //         amount: "$90,000.00",
+    //         location: "Russian Federation",
+    //         startDate: new Date,
+    //         endDate: new Date,
+    //     }]
 
+    // }
 
-export class ContractList extends Component {
+    GetContracts = () => {
+        axios.get('/Contract/GetAllContracts').then(response => {
+            const ret = JSON.parse(response.data);
+
+            if (ret.Status) {
+                this.setState({contracts: ret.Data});
+            } else {
+                console.error(ret.Message);
+            }
+
+        }).catch(error => {
+            console.error(error);
+        })
+    }
+
     render() {
         return (
             <Col>
@@ -23,29 +58,19 @@ export class ContractList extends Component {
                         </Row>
                     </CardHeader>
                     <CardBody>
-                        <table className="table mb-0">
+                        <table className="table mb-0" id='Contracts'>
                             <thead className="bg-light">
                                 <tr>
                                     <th scope="col" className="border-0">#</th>
                                     <th scope="col" className="border-0">Nombre</th>
                                     <th scope="col" className="border-0">Ciclo</th>
-                                    <th scope="col" className="border-0">Direccion</th>
-                                    <th scope="col" className="border-0">Telefono</th>
+                                    <th scope="col" className="border-0">No. Hectáreas</th>
                                     <th scope="col" className="border-0">Cantidad </th>
+                                    <th scope="col" className="border-0">Direccion</th>
                                     <th scope="col" className="border-0">Acciones</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Maria Palomares</td>
-                                    <td>Mayo 2018 - Diciembre 2020</td>
-                                    <td>Russian Federation</td>
-                                    <td>107-0339</td>
-                                    <td>$90,000.00</td>
-                                    <td></td>
-                                </tr>
-                            </tbody>
+                            <ContractList contracts={this.state.contracts} />
                         </table>
                     </CardBody>
                 </Card>
@@ -55,4 +80,4 @@ export class ContractList extends Component {
 }
 
 
-export default ContractList;
+export default ContractTable;

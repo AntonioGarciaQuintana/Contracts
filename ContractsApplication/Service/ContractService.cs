@@ -30,9 +30,9 @@ namespace ContractsApplication.Service
 
         }
 
-        public IQueryable GetAllContracts()
+        public IList<Contracts> GetAllContracts()
         {
-            return UnitOfWork.GetRepository<Contracts>().GetAll();
+            return UnitOfWork.GetRepository<Contracts>().GetAll().ToList();
         }
 
         public Contracts GetContractById(int id)
@@ -50,7 +50,7 @@ namespace ContractsApplication.Service
                 contractBD.Acres = contract.Acres;
                 contractBD.Amount = contract.Amount;
                 contractBD.Location = contract.Location;
-                contractBD.StartDaTe = contract.StartDaTe;
+                contractBD.StartDate = contract.StartDate;
                 contractBD.EndDate = contract.EndDate;
                 contractBD.Phone = contract.Phone;
                 contractBD.Description = contract.Description;

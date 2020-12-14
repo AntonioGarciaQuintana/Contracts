@@ -196,6 +196,10 @@
     <Compile Include="Migrations\202010260010539_add-ContractModel-And-Service.designer.cs">
       <DependentUpon>202010260010539_add-ContractModel-And-Service.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202012140108287_updateStartDateColumnContract.cs" />
+    <Compile Include="Migrations\202012140108287_updateStartDateColumnContract.designer.cs">
+      <DependentUpon>202012140108287_updateStartDateColumnContract.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Contracts.cs" />
     <Compile Include="Models\Test.cs" />
@@ -208,6 +212,7 @@
     <Compile Include="Service\Interfaces\IContractService.cs" />
     <Compile Include="Service\Interfaces\ITestService.cs" />
     <Compile Include="Service\TestService.cs" />
+    <Compile Include="Util\ApiResult.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
@@ -303,6 +308,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202010260010539_add-ContractModel-And-Service.resx">
       <DependentUpon>202010260010539_add-ContractModel-And-Service.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012140108287_updateStartDateColumnContract.resx">
+      <DependentUpon>202012140108287_updateStartDateColumnContract.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

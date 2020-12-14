@@ -29,7 +29,7 @@ namespace ContractsApplication.Models
         public string Location { get; set; }
 
         [Required]
-        public DateTime StartDaTe { get; set; }
+        public DateTime StartDate { get; set; }
 
         [Required]
         public string EndDate { get; set; }

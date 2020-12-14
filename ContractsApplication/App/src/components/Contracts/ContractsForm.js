@@ -22,7 +22,7 @@ import {
 import { Link } from "react-router-dom";
 import PageTitle from "../common/PageTitle";
 import RangeDatePicker from "../common/RangeDatePicker";
-import axios from 'axios'
+import axios from 'axios';
 
 class ContractForm extends Component {
 
@@ -37,6 +37,8 @@ class ContractForm extends Component {
         phone: "",
         description: ""
     }
+
+    
 
     handleChange = (e) => {
         this.setState({ [e.target.name]: e.target.value });
